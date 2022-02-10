@@ -1,0 +1,105 @@
+/*----------------------------------------------------------------------
+Page loader CSS BY cutekit.net
+
+USAGE:
+------
+- Add this as an external CSS file and put it before other css links inside
+html file
+- Add the following tag inside HTML file :
+<div class="page-loader" id="page-loader">
+    <div>
+        <div class="icon"></div>
+        <p>loading</p>
+    </div>
+</div>
+------------------------------------------------------------------------*/
+
+.page-loader {
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    background: #1b1919;
+    display: block;
+}
+
+.page-loader .fa {
+    font-size: 2.5rem;
+}
+
+.page-loader,
+.page-loader.visible {
+    transition: 1.2s ease-in;
+    opacity: 1;
+    visibility: visible;
+}
+
+.page-loader.p-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.page-loader div {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    display: block;
+    transform: translateY(-50%);
+}
+
+.page-loader div .icon {
+    position: absolute;
+    display: inline-block;
+    margin-left: -40px;
+    margin-top: -40px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    content: "";
+    background: transparent;
+    border-radius: 100px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.page-loader div p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: currentColor;
+    letter-spacing: 1em;
+    padding-left: 1em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', 'Roboto', 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+
+.icon-spin,
+.icon-loading-a {
+    -webkit-animation: spin 1s infinite linear;
+    animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
